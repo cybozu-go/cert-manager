@@ -74,7 +74,7 @@ func BuildHTTPClient(metrics *metrics.Metrics, skipTLSVerify bool) *http.Client 
 				TLSClientConfig:       &tls.Config{InsecureSkipVerify: skipTLSVerify},
 				MaxIdleConns:          100,
 				IdleConnTimeout:       90 * time.Second,
-				TLSHandshakeTimeout:   10 * time.Second,
+				TLSHandshakeTimeout:   20 * time.Second,
 				ExpectContinueTimeout: 1 * time.Second,
 			},
 			Timeout: defaultACMEHTTPTimeout,
