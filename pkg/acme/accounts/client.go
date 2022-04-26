@@ -102,7 +102,7 @@ func buildHTTPClientWithCABundle(metrics *metrics.Metrics, skipTLSVerify bool, c
 				TLSClientConfig:       tlsConfig,
 				MaxIdleConns:          100,
 				IdleConnTimeout:       90 * time.Second,
-				TLSHandshakeTimeout:   10 * time.Second,
+				TLSHandshakeTimeout:   20 * time.Second,
 				ExpectContinueTimeout: 1 * time.Second,
 			},
 			Timeout: defaultACMEHTTPTimeout,
