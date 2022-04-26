@@ -296,7 +296,7 @@ func testReachability(ctx context.Context, url *url.URL, key string, dnsServers 
 	}
 	client := &http.Client{
 		Transport: transport,
-		Timeout:   time.Second * 10,
+		Timeout:   time.Second * 20,
 	}
 
 	response, err := client.Do(req) // #nosec G704 -- intentional ACME HTTP-01 self-check request; URL is provided by caller (typically Challenge DNSName + token via buildChallengeUrl)
