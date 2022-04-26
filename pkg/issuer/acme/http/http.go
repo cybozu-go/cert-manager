@@ -293,7 +293,7 @@ func testReachability(ctx context.Context, url *url.URL, key string, dnsServers 
 	}
 	client := &http.Client{
 		Transport: transport,
-		Timeout:   time.Second * 10,
+		Timeout:   time.Second * 20,
 	}
 
 	response, err := client.Do(req)

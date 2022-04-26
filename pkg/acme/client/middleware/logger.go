@@ -28,7 +28,7 @@ import (
 )
 
 const (
-	timeout = time.Second * 10
+	timeout = time.Second * 20
 )
 
 func NewLogger(baseCl client.Interface) client.Interface {
